@@ -130,7 +130,7 @@ include('templates_transaksi/sidebar.php'); ?>
 
                             <button name="submit" type="submit" data-toggle="modal"
                                 data-target="#editModalTransaksi-<?= $id ?>" class="btn btn-success"><i
-                                    class="fas fa-trash"></i>Update Transaction</button>
+                                    class="fas fa-pen mr-2"></i>Update Transaction</button>
 
 
                 </form>
