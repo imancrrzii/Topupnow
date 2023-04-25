@@ -52,9 +52,9 @@ class ManageCategory
                                     class="fas fa-plus mr-2"></i>Tambah Kategori</a>
                             <div class="col-md-12">
                                 <?php
-                                if (isset($_SESSION['addCategory'])) {
-                                    echo $_SESSION['addCategory']; 
-                                    unset($_SESSION['addCategory']); 
+                                if (isset($_SESSION['add'])) {
+                                    echo $_SESSION['add']; 
+                                    unset($_SESSION['add']); 
                                 }
                                 if (isset($_SESSION['delete'])) { 
                                     echo $_SESSION['delete']; 
@@ -67,11 +67,11 @@ class ManageCategory
                                 ?>
                             </div>
                             <form class="form-inline my-3">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Search"
+                                <input class="form-control me-2" type="search" placeholder="Search"
                                     aria-label="Search" name="search">
                                 <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                             </form>
-                            <table id="datatable" class="display compact table table-striped table-bordered">
+                            <table id="datatable" class="display compact table table-striped">
                                 <thead>
                                     <tr>
                                         <th>No</th>

@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
 
     $type1 = explode('.', $filename);
     $type2 = $type1[1];
-    $newName = 'item' . time() . '.' . $type2;
+    $newName = 'pay' . time() . '.' . $type2;
     $allow_type = array('jpg', 'jpeg', 'png', 'Png', 'Jpg', 'Jpeg');
     $upload_dir = 'assets/img/bukti_pembayaran/';
 
@@ -114,9 +114,9 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="row">
-        <div class="col-lg-4 mb-5">
+        <div class="col-lg-5 mb-5">
             <div class="card" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
-                <h3 class="card-header bg-light"><i class="bi bi-info-circle-fill me-2"></i>How to Top-up</h3>
+                <h3 class="card-header bg-light"><i class="bi bi-info-circle-fill me-2"></i>Cara topup</h3>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
 
@@ -137,10 +137,10 @@ if (isset($_POST['submit'])) {
                         <div class="accordion" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-danger" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                            <h5 class="text-white">Telkomsel</h5>
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                        aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <span class="badge rounded-pill bg-danger">Telkomsel</span>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
@@ -152,30 +152,13 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                        aria-controls="flush-collapseTwo">
-                                            <h5 class="text-white">DANA</h5>
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                        aria-expanded="false" aria-controls="flush-collapseTwo">
+                                        <span class="badge rounded-pill bg-info">DANA</span>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body">
-                                        <h5>Nomor Rekening: 171255878</h5>
-                                        <h5>Nama : Kelompok 5</h5>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                        aria-controls="flush-collapseThree">
-                                            <h5 class="text-white">BCA</h5>
-                                    </button>
-                                </h2>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionFlushExample">
                                     <div class="accordion-body">
                                         <h5>Nomor : 081368798772</h5>
@@ -186,10 +169,27 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                        aria-controls="flush-collapseFour">
-                                            <h5 class="text-white">BRI</h5>
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                        aria-expanded="false" aria-controls="flush-collapseThree">
+                                        <span class="badge rounded-pill bg-primary">Bank Central Asia</span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor Rekening : 171255878</h5>
+                                        <h5>Nama : Kelompok 5</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
+                                        aria-expanded="false" aria-controls="flush-collapseFour">
+                                        <span class="badge rounded-pill bg-primary">Bank Rakyat Indonesia</span>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFour" class="accordion-collapse collapse"
@@ -203,10 +203,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed bg-success" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                        aria-controls="flush-collapseFive">
-                                            <h5 class="text-white">GOPAY</h5>
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
+                                        aria-expanded="false" aria-controls="flush-collapseFive">
+                                        <span class="badge rounded-pill bg-success">Gopay</span>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFive" class="accordion-collapse collapse"
@@ -222,7 +222,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-        <div class="col-lg-8 mb-5">
+        <div class="col-lg-7 mb-5">
             <div class="card" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
                 <h3 class="card-header bg-light">Masukkan Data anda!</h3>
                 <div class="card-body">
@@ -231,21 +231,20 @@ if (isset($_POST['submit'])) {
                     </div>
                     <label>ID Game</label>
                     <input type="text" class="form-control form-control-lg mb-2" name="customer_id_game"
-                        placeholder="Masukkan ID Game Anda" required>
+                        placeholder="Masukkan id game anda" required>
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
                         <i class="bi bi-2-circle-fill me-2"></i>Masukkan Email
                     </div>
-
                     <label>Nama</label>
                     <input type="text" class="form-control form-control-lg mb-2" name="customer_name"
-                        placeholder="Masukkan Nama Anda" required>
+                        placeholder="Masukkan nama anda" required>
                     <label>Telepon</label>
                     <input type="text" class="form-control form-control-lg mb-2" name="customer_contact"
-                        placeholder="Masukkan Nomor Telepon Anda" required>
-                    <label>E-Mail</label>
+                        placeholder="Masukkan nomor telepon anda" required>
+                    <label>Email</label>
                     <div class="inputBox">
                         <input type="email" class="form-control form-control-lg mb-2" name="customer_email"
-                            placeholder="Masukkan E-mail Anda" required>
+                            placeholder="Masukkan email anda" required>
                     </div>
 
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
@@ -299,14 +298,15 @@ if (isset($_POST['submit'])) {
 
                     <div class="form-check mt-3">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                            <h5>Ya, Saya yakin untuk melakukan pembelian!</h5>
+                        <h5>Ya, Saya yakin untuk melakukan pembelian!</h5>
                     </div>
 
-                    <div class="d-flex justify-content-center">
-                    <button class="btn btn-lg btn-primary w-100 mt-3" id="btnKirim" type="submit" name="submit"><i
-                            class="fas fa-paper-plane me-2"></i>Kirim Pesanan</button>
-                    </button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-lg btn-primary w-25 mt-3" id="btnKirim" type="submit" name="submit">Beli
+                            Sekarang</button>
+                        </button>
                     </div>
+
                     </form>
                 </div>
             </div>

@@ -19,7 +19,7 @@ class AddAdmin
                 full_name='$full_name',
                 username='$username',
                 password='$password'";
-        $res = mysqli_query($this->conn, $sql) or die(mysqli_error());
+        $res = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
         return $res;
     }
 }

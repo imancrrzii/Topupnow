@@ -36,6 +36,7 @@ class Item
                 $title_item = $rows['title'];
                 $image_name_item = $rows['image_name'];
                 $description = $rows['description'];
+                echo "<a href='" . base_url . "transaksi.php?id=$id_item'>";
                 echo "<div class='card' data-aos='zoom-in'>";
                 if ($image_name_item == '') {
                     echo "<img src='" . base_url . "img.png' alt=''>";
@@ -44,8 +45,8 @@ class Item
                 }
                 echo "<h2>$title_item</h2>";
                 echo "<p>$description</p>";
-                echo "<a href='" . base_url . "transaksi.php?id=$id_item'><button>Topup Now</button></a>";
                 echo "</div>";
+                echo "</a>";
             }
         } else {
             echo '<div class="alert alert-danger md-3 mt-5 alert-tidak" data-aos-delay="300" data-aos-duration="1000" role="alert" >
@@ -73,7 +74,7 @@ if (isset($_GET['id'])) {
 
 <div id="items" class="container-fluid">
     <div class="heading text-center" data-aos="fade-up">
-        <h1>Item dari kategori
+        <h1>Item dari
             <?php echo $title ?>
         </h1>
     </div>

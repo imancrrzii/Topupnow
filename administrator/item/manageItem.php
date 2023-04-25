@@ -80,7 +80,7 @@ class ManageItem
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
         </form>
-        <table id="datatable" class="display compact table table-striped table-bordered">
+        <table id="datatable" class="display compact table table-striped">
             <thead>
                 <tr>
                     <th>No</th>
@@ -96,7 +96,7 @@ class ManageItem
             <?php
             $manageItem = new manageItem($conn);
             $page = isset($_GET['page']) ? $_GET['page'] : 1;
-            $limit = 5;
+            $limit = 10;
             $start = ($page - 1) * $limit;
             $res = $manageItem->getItemLimit($start, $limit);
             if ($res == TRUE) {
@@ -104,7 +104,7 @@ class ManageItem
                 $count = mysqli_num_rows($res);
 
                 if ($count > 0) {
-                    $sn = 5 * ($page - 1) + 1;
+                    $sn = 10 * ($page - 1) + 1;
                     while ($rows = mysqli_fetch_assoc($res)) {
                         $id = $rows['id'];
                         $title = $rows['title'];
@@ -130,9 +130,7 @@ class ManageItem
                             </td>
                             <td>
                                 <?php
-                                //check if image name is available or not
                                 if ($image_name != '') {
-                                    //display the image
                                     ?>
                                     <img src="<?php echo base_url; ?>assets/img/item/<?php echo $image_name; ?>" width="100px">
                                     <?php
@@ -151,9 +149,9 @@ class ManageItem
                                 <div class="d-flex">
 
                                     <a href="<?php echo base_url; ?>administrator/item/updateItem.php?id=<?php echo $id; ?>"><button
-                                            class="btn btn-warning mr-1"><i class="fas fa-edit mr-2"></i>Edit</button></a>
+                                            class="btn btn-warning mr-1"><i class="fas fa-pen"></i></button></a>
                                     <button data-toggle="modal" data-target="#hapusModalItem-<?= $id ?>" class="btn btn-danger"><i
-                                            class="fas fa-trash mr-1"></i>Hapus</button>
+                                            class="fas fa-trash"></i></button>
                                 </div>
                             </td>
                         </tr>
@@ -187,12 +185,6 @@ class ManageItem
                     }
                 } else {
                     ?>
-                    <tr class="text-center">
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <i class="fas fa-trash mr-2"></i>Item not Available!<button type="button" class="close"
-                                data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        </div>
-                    </tr>
                     <?php
                 }
             }

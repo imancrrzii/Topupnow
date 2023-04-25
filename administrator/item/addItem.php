@@ -1,7 +1,7 @@
 <?php
 ob_start();
-include('../templates/header.php');
-include('../templates/sidebar.php');
+include('templates_item/header.php');
+include('templates_item/sidebar.php');
 
 ?>
 
@@ -30,7 +30,7 @@ class AddItem
             featured='$featured',
             active='$active'
         ";
-        $res = mysqli_query($this->conn, $sql) or die(mysqli_error());
+        $res = mysqli_query($this->conn, $sql) or die(mysqli_error($this->conn));
         return $res;
     }
 }
@@ -82,7 +82,7 @@ class AddItem
 
                             <div class="form-group">
                                 <label>Select Image</label>
-                                <input type="file" name="image" id="image" class="form-control">
+                                <input type="file" name="image" id="image" class="form-control mb-2">
                             </div>
 
                             <div class="form-group">
@@ -213,14 +213,14 @@ class AddItem
 
         if ($res == TRUE) {
 
-            $_SESSION['add'] = '<div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+            $_SESSION['addItem'] = '<div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
                             <i class="fas fa-user mr-2"></i>Data berhasil ditambahkan!<button type="button" class="close"
                             data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
             header('location:' . base_url . 'administrator/item/manageItem.php');
             exit;
         } else {
 
-            $_SESSION['add'] = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            $_SESSION['addItem'] = '<div class="alert alert-success alert-dismissible fade show" role="alert">
                             <i class="fas fa-user mr-2"></i>Data gagal ditambahkan!<button type="button" class="close"
                             data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
             header('location:' . base_url . 'administrator/item/addItem.php');

@@ -40,6 +40,8 @@ if (!isset($_SESSION['user'])) {
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Administrator TopupNow</title>
   <link rel="shortcut icon" href="<?= base_url ?>assets/prepaid.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?php echo base_url?>assets/assets_stisla/modules/bootstrap/css/bootstrap.min.css">

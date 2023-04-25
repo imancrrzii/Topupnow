@@ -15,6 +15,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+  text-decoration: none;
+}
+
 body {
   overflow-x: hidden;
   background: #e8eaf6;
@@ -356,18 +361,18 @@ body {
 }
 
 #items .card-container .card {
-  height: 24rem;
-  width: 18rem;
+  height: 26rem;
+  width: 20rem;
   background: #fbfbfb;
   padding: 1rem;
   margin: 1rem;
   text-align: center;
   box-shadow: 0 0 .5rem #37517e;
-  border-radius: 0.35rem;
-  -webkit-border-radius: 0.35rem;
-  -moz-border-radius: 0.35rem;
-  -ms-border-radius: 0.35rem;
-  -o-border-radius: 0.35rem;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  -ms-border-radius: 1.2rem;
+  -o-border-radius: 1.2rem;
 }
 
 h4 {
@@ -375,15 +380,15 @@ h4 {
 }
 
 #items .card-container .card img {
-  height: 42%;
+  height: 1000%;
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 0.35rem;
-  -webkit-border-radius: 0.35rem;
-  -moz-border-radius: 0.35rem;
-  -ms-border-radius: 0.35rem;
-  -o-border-radius: 0.35rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 #items .card-container .card p {

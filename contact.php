@@ -5,7 +5,6 @@ include('templates/header.php');
 <?php
 class ContactForm
 {
-
     private $name;
     private $email;
     private $subject;
@@ -38,14 +37,12 @@ class ContactForm
             $res2 = mysqli_query($conn, $sql2);
 
             if ($res2 == TRUE) {
-                //message placed
                 echo '<script>
                 $(document).ready(function(){
                     $("#contactModal").modal("show");
                 });
             </script>';
             } else {
-                //failed to place message
                 echo '<script>alert("Failed to place message!! Try again later")</script>';
                 echo ("<script>location.href = '" . base_url . "';</script>");
             }
