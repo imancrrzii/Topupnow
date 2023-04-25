@@ -1,7 +1,5 @@
-# FoodEdgy
-Online Food Ordering Management System Mini-Project. This is a Web based Application developed using PHP as a Host Language.Anybody can create an account and order online.
-
-# Screenshots
+# TopupNow
+Online Topup Management System Mini-Project. This is a Web based Application developed using PHP with OOP as a Host Language.Anybody can create an account and order online.
 
 # Technologies Used
 * PHP
@@ -13,7 +11,6 @@ Online Food Ordering Management System Mini-Project. This is a Web based Applica
 Software : XAMPP / Wamp / Mamp/ Lamp (anyone).
 
 # Installation
-Just create new database in phpmyadmin and import SQL file ```pplbo.sql```. Also configure the ```constants.php``` in ```admin/config``` folder to set up the necessary connections with the database.
+Just create new database in phpmyadmin and import SQL file ```pplbo.sql```. Also configure the ```database.php``` in ```config``` folder to set up the necessary connections with the database.
 
-# Complete project
 

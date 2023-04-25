@@ -114,9 +114,9 @@ if (isset($_POST['submit'])) {
     </div>
 
     <div class="row">
-        <div class="col-lg-5 mb-5">
+        <div class="col-lg-4 mb-5">
             <div class="card" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
-                <h3 class="card-header bg-light"><i class="bi bi-info-circle-fill mr-2"></i>How to Top-up</h3>
+                <h3 class="card-header bg-light"><i class="bi bi-info-circle-fill me-2"></i>How to Top-up</h3>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
 
@@ -134,49 +134,132 @@ if (isset($_POST['submit'])) {
                         <h5>5. Tunggu Administrator menyelesaikan pembelianmu</h5>
                         <h5>6. Produk akan ditambahkan ke akun permainanmu</h5>
                         <h3 class="card-header bg-light mb-3 mt-3">Informasi Pembayaran</h3>
-                        <h4>Lakukan Pembayaranmu via:</h4>
-                        <h5>1. Telkomsel - 081368798772</h5>
-                        <h5>2. DANA - 081368798772</h5>
-                        <h5>3. BCA - 1608211555</h5>
-                        <h5>4. BRI - 152221447</h5>
-                        <h5>5. GOPAY - 081368798772</h5>
+                        <div class="accordion" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        <span class="badge p-3 text-bg-danger">
+                                            <h5>Telkomsel</h5>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor : 081368798772</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        <span class="badge p-3 text-bg-primary">
+                                            <h5>DANA</h5>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor Rekening: 171255878</h5>
+                                        <h5>Nama : Kelompok 5</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        <span class="badge p-3 text-bg-primary">
+                                            <h5>BCA</h5>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor : 081368798772</h5>
+                                        <h5>Nama : Kelompok 5</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                        aria-controls="flush-collapseFour">
+                                        <span class="badge p-3 text-bg-primary">
+                                            <h5>BRI</h5>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor : 125454545</h5>
+                                        <h5>Nama : Kelompok 5</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
+                                        aria-controls="flush-collapseFive">
+                                        <span class="badge p-3 text-bg-success">
+                                            <h5>GOPAY</h5>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">
+                                        <h5>Nomor : 081368798772</h5>
+                                        <h5>Nama : Kelompok 5</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-7 mb-5">
+        <div class="col-lg-8 mb-5">
             <div class="card" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
                 <h3 class="card-header bg-light">Masukkan Data anda!</h3>
                 <div class="card-body">
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
-                        <i class="bi bi-1-circle-fill mr-2"></i>Masukkan User ID
+                        <i class="bi bi-1-circle-fill me-2"></i>Masukkan User ID
                     </div>
                     <label>ID Game</label>
-                    <div class="inputBox">
-                        <input type="text" class="form-control" name="customer_id_game"
-                            placeholder="Masukkan ID Game Anda" required>
-                    </div>
+                    <input type="text" class="form-control form-control-lg mb-2" name="customer_id_game"
+                        placeholder="Masukkan ID Game Anda" required>
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
-                        <i class="bi bi-2-circle-fill mr-2"></i>Masukkan Email
+                        <i class="bi bi-2-circle-fill me-2"></i>Masukkan Email
                     </div>
 
                     <label>Nama</label>
-                    <div class="inputBox">
-                        <input type="text" class="form-control" name="customer_name" placeholder="Masukkan Nama Anda"
-                            required>
-                    </div>
+                    <input type="text" class="form-control form-control-lg mb-2" name="customer_name"
+                        placeholder="Masukkan Nama Anda" required>
                     <label>Telepon</label>
-                    <div class="inputBox">
-                        <input type="text" class="form-control" name="customer_contact"
-                            placeholder="Masukkan Nomor Telepon Anda" required>
-                    </div>
+                    <input type="text" class="form-control form-control-lg mb-2" name="customer_contact"
+                        placeholder="Masukkan Nomor Telepon Anda" required>
                     <label>E-Mail</label>
                     <div class="inputBox">
-                        <input type="email" class="form-control" name="customer_email"
+                        <input type="email" class="form-control form-control-lg mb-2" name="customer_email"
                             placeholder="Masukkan E-mail Anda" required>
                     </div>
 
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
-                        <i class="bi bi-3-circle-fill mr-2"></i>Pilih Pembayaran
+                        <i class="bi bi-3-circle-fill me-2"></i>Pilih Pembayaran
                     </div>
                     <div class="section over-hide z-bigger">
                         <div class="container">
@@ -185,31 +268,31 @@ if (isset($_POST['submit'])) {
                                     <input class="checkbox-customer_pay" value="TELKOMSEL" type="radio"
                                         name="customer_pay" id="tool-1" checked>
                                     <label class="for-checkbox-customer_pay" for="tool-1">
-                                        <i class='bx bx-credit-card-alt mr-2'></i>TELKOMSEL
+                                        <i class='bx bx-credit-card-alt me-2'></i>TELKOMSEL
                                         <?= number_format($price * 1.1) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="DANA" name="customer_pay"
                                         id="tool-2">
                                     <label class="for-checkbox-customer_pay" for="tool-2">
-                                        <i class='bx bx-credit-card-alt mr-2'></i>DANA
+                                        <i class='bx bx-credit-card-alt me-2'></i>DANA
                                         <?= number_format($price * 0.96) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="BCA" name="customer_pay"
                                         id="tool-3">
                                     <label class="for-checkbox-customer_pay" for="tool-3">
-                                        <i class='bx bxs-credit-card mr-2'></i>BCA
+                                        <i class='bx bxs-credit-card me-2'></i>BCA
                                         <?= number_format($price * 1) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="BRI" name="customer_pay"
                                         id="tool-4">
                                     <label class="for-checkbox-customer_pay" for="tool-4">
-                                        <i class='bx bxs-credit-card mr-2'></i>BRI
+                                        <i class='bx bxs-credit-card me-2'></i>BRI
                                         <?= number_format($price * 1) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="GOPAY" name="customer_pay"
                                         id="tool-5">
                                     <label class="for-checkbox-customer_pay" for="tool-5">
-                                        <i class='bx bxs-credit-card mr-2'></i>GOPAY
+                                        <i class='bx bxs-credit-card me-2'></i>GOPAY
                                         <?= number_format($price * 0.96) ?>
                                     </label>
                                 </div>
@@ -218,20 +301,20 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
-                        <i class="bi bi-4-circle-fill mr-2"></i>Upload Bukti Pembayaran
+                        <i class="bi bi-4-circle-fill me-2"></i>Upload Bukti Pembayaran
                     </div>
-                    <div class="inputImg mt-2 mb-2">
-                        <input type="file" class="form-control" name="pay_img" required>
+                    <div class="form-group">
+                        <input type="file" class="form-control form-control-lg mb-2" name="pay_img" required>
                     </div>
 
                     <div class="form-check mt-3">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
-                        <label class="form-check-label ml-1" for="flexCheckDefault">
-                            Ya, Saya yakin untuk melakukan pembelian! </label>
+                            <h5>Ya, Saya yakin untuk melakukan pembelian!</h5>
                     </div>
 
+
                     <button class="btn btn-success mt-3" id="btnKirim" type="submit" name="submit"><i
-                            class="fas fa-paper-plane mr-2"></i>Kirim Pesanan</button>
+                            class="fas fa-paper-plane me-2"></i>Kirim Pesanan</button>
                     </button>
                     </form>
                 </div>
@@ -249,7 +332,7 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="modal-footer">
                         <button onclick="location.href='<?php echo base_url ?>'" type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal"><i class="fas fa-undo-alt mr-2"></i>Kembali ke halaman
+                            data-bs-dismiss="modal"><i class="fas fa-undo-alt me-2"></i>Kembali ke halaman
                             utama</button>
                     </div>
                 </div>

@@ -92,11 +92,11 @@ class Category
             <div class="container">
                 <div class="row min-vh-100 align-items-center">
 
-                    <div class="col-md-6 text-md-left text-center content" data-aos="fade-down" data-aos-easing="linear"
+                    <div class="col-md-6 text-md-left content" data-aos="fade-down" data-aos-easing="linear"
                         data-aos-duration="1500">
                         <h1>Cara tercepat dan termudah untuk membeli kredit game</h1>
                         <p>Situs web top-up terbesar dan tepercaya untuk game dan hiburan online di dunia.</p>
-                        <a href="<?= base_url; ?>kategori_index.php"><button type="button" class="btn btn-primary">Coba Sekarang</button></a>
+                        <a href="<?= base_url; ?>kategori.php"><button type="button" class="btn btn-primary">Coba Sekarang</button></a>
                     </div>
                     <div class="col-md-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-duration="1000">

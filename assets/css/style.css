@@ -96,7 +96,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 12rem;
+  padding: 2rem 4rem;
   z-index: 1000;
 }
 
@@ -1514,6 +1514,7 @@ img {
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
+  text-decoration: none;
 }
 
 #footer .footer-top .footer-links ul a:hover {
@@ -1743,7 +1744,7 @@ img {
   -o-border-radius: 0.35rem;
 }
 
-.form-control {
+/* .form-control {
   display: block;
   width: 100%;
   height: calc(1.5em + 0.75rem + 2px);
@@ -1758,7 +1759,7 @@ img {
   border-radius: 0.25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   height: 3.5rem;
-}
+} */
 
 #contact form .outputText input, #contact form .outputText textarea, #transaksi form .outputText input, #transaksi form .outputText textarea {
   outline: none;
@@ -1841,7 +1842,7 @@ label {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #6e707e;
+  color: #ffffff;
   width: 100%;
   border-radius: 0.35rem;
   -webkit-border-radius: 0.35rem;
@@ -1851,7 +1852,7 @@ label {
 }
 
 #transaksi form .inputImg input [type=file] {
-  background-color: #fbfbfb;
+  background-color: #ffffff;
 }
 
 .custom-select {
