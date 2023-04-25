@@ -72,7 +72,7 @@ class AdminDashboard
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageAdmin.php">
+                        <a href="<?php echo base_url; ?>administrator/admin/manageAdmin.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-light text-black">
                                     <i class="fas fa-user-cog text-dark"></i>
@@ -91,7 +91,7 @@ class AdminDashboard
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageCategory.php">
+                        <a href="<?php echo base_url; ?>administrator/kategori/manageCategory.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-primary">
                                     <i class="far fa-list-alt"></i>
@@ -110,7 +110,7 @@ class AdminDashboard
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageFood.php">
+                        <a href="<?php echo base_url; ?>administrator/item/manageItem.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-danger">
                                     <i class="fas fa-clipboard-list"></i>
@@ -129,7 +129,7 @@ class AdminDashboard
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageOrder.php">
+                        <a href="<?php echo base_url; ?>administrator/transaksi/manageOrder.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-warning">
                                     <i class="fas fa-shopping-cart"></i>
@@ -149,7 +149,7 @@ class AdminDashboard
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageOrder.php">
+                        <a href="<?php echo base_url; ?>administrator/transaksi/manageOrder.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-success">
                                     <i class="fas fa-receipt"></i>
@@ -168,7 +168,7 @@ class AdminDashboard
 
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                        <a href="<?php echo base_url; ?>administrator/manageContact.php">
+                        <a href="<?php echo base_url; ?>administrator/kontak/manageContact.php">
                             <div class="card card-statistic-1">
                                 <div class="card-icon bg-info">
                                     <i class="far fa-envelope"></i>

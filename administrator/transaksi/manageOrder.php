@@ -27,9 +27,9 @@ class ManageOrder
     {
         if (isset($_GET['search'])) {
             $searchTerm = mysqli_real_escape_string($this->conn, $_GET['search']);
-            $sql = "SELECT * FROM pesanan WHERE item LIKE '%$searchTerm%' ORDER BY id ASC LIMIT $start, $limit";
+            $sql = "SELECT * FROM pesanan WHERE item LIKE '%$searchTerm%' ORDER BY id DESC LIMIT $start, $limit";
         } else {
-            $sql = "SELECT * FROM pesanan ORDER BY id ASC LIMIT $start, $limit";
+            $sql = "SELECT * FROM pesanan ORDER BY id DESC LIMIT $start, $limit";
         }
 
         $result = mysqli_query($this->conn, $sql);
@@ -180,14 +180,14 @@ class ManageOrder
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Hapus Admin</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Hapus Transaksi</h5>
                                             </div>
                                             <div class="modal-body">
                                                 Apakah anda yakin ingin menghapus transaksi
-                                                <?= $customer_name ?>?
+                                                <?= $item ?>?
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
+                                                <button type="button" class="btn btn-primary"
                                                     data-dismiss="modal">Batal</button>
                                                 <a href="<?= base_url; ?>administrator/transaksi/deleteOrder.php?id=<?= $id ?>"
                                                     type="button" class="btn btn-danger">Hapus</a>
