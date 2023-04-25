@@ -137,12 +137,10 @@ if (isset($_POST['submit'])) {
                         <div class="accordion" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed bg-danger" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseOne" aria-expanded="false"
                                         aria-controls="flush-collapseOne">
-                                        <span class="badge p-3 text-bg-danger">
-                                            <h5>Telkomsel</h5>
-                                        </span>
+                                            <h5 class="text-white">Telkomsel</h5>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
@@ -154,12 +152,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                         aria-controls="flush-collapseTwo">
-                                        <span class="badge p-3 text-bg-primary">
-                                            <h5>DANA</h5>
-                                        </span>
+                                            <h5 class="text-white">DANA</h5>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseTwo" class="accordion-collapse collapse"
@@ -173,12 +169,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseThree" aria-expanded="false"
                                         aria-controls="flush-collapseThree">
-                                        <span class="badge p-3 text-bg-primary">
-                                            <h5>BCA</h5>
-                                        </span>
+                                            <h5 class="text-white">BCA</h5>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -192,12 +186,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed bg-primary" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseFour" aria-expanded="false"
                                         aria-controls="flush-collapseFour">
-                                        <span class="badge p-3 text-bg-primary">
-                                            <h5>BRI</h5>
-                                        </span>
+                                            <h5 class="text-white">BRI</h5>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFour" class="accordion-collapse collapse"
@@ -211,12 +203,10 @@ if (isset($_POST['submit'])) {
                             </div>
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    <button class="accordion-button collapsed bg-success" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#flush-collapseFive" aria-expanded="false"
                                         aria-controls="flush-collapseFive">
-                                        <span class="badge p-3 text-bg-success">
-                                            <h5>GOPAY</h5>
-                                        </span>
+                                            <h5 class="text-white">GOPAY</h5>
                                     </button>
                                 </h2>
                                 <div id="flush-collapseFive" class="accordion-collapse collapse"
