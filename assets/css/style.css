@@ -163,6 +163,15 @@ body {
 
 }
 
+@media (max-width: 576px) {
+  #header nav ul li a:hover {
+    padding: 1rem 2rem;
+    color: #e8eaf6;
+    background: #4e73df;
+    text-decoration: none;
+  }
+}
+
 .header-active {
   background: #e8eaf6;
   height: 7rem;
@@ -241,7 +250,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: #6610f2;
+  background: #37517e;
   height: 100%;
   width: 0%;
   -webkit-transition: .2s;
@@ -296,10 +305,6 @@ body {
   background: #FBFBFB;
   margin: 0 1rem;
   border-radius: 20px;
-  -webkit-border-radius: ;
-  -moz-border-radius: ;
-  -ms-border-radius: ;
-  -o-border-radius: ;
 }
 
 #home .controls .dots:hover {
@@ -1664,7 +1669,7 @@ img {
   }
 
   #header nav ul li a {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     border-radius: 0.35rem;
     -webkit-border-radius: 0.35rem;
     -moz-border-radius: 0.35rem;

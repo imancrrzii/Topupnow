@@ -90,13 +90,13 @@ class ManageOrder
                                 <?php
                                 $manageOrder = new manageOrder($conn);
                                 $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                                $limit = 10;
+                                $limit = 5;
                                 $start = ($page - 1) * $limit;
                                 $res = $manageOrder->getOrderLimit($start, $limit);
                                 if ($res == TRUE) {
                                     $count = mysqli_num_rows($res);
                                     if ($count > 0) {
-                                        $sn = 10 * ($page - 1) + 1;
+                                        $sn = 5 * ($page - 1) + 1;
                                         while ($rows = mysqli_fetch_assoc($res)) {
                                             $id = $rows['id'];
                                             $item = $rows['item'];
@@ -169,7 +169,7 @@ class ManageOrder
                                             <a
                                                 href="<?= base_url; ?>administrator/transaksi/updateOrder.php?id=<?= $id; ?>"><button
                                                     class="btn btn-warning mr-1"><i
-                                                        class="fas fa-edit"></i></button></a>
+                                                        class="fas fa-pen"></i></button></a>
                                             <button data-toggle="modal" data-target="#hapusModalTransaksi-<?= $id ?>"
                                                 class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                         </div>

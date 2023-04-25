@@ -1,7 +1,7 @@
 <?php
 ob_start();
-include('templates_item/header.php');
-include('templates_item/sidebar.php');
+include('../templates/header.php');
+include('../templates/sidebar.php');
 
 ?>
 

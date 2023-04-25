@@ -302,10 +302,11 @@ if (isset($_POST['submit'])) {
                             <h5>Ya, Saya yakin untuk melakukan pembelian!</h5>
                     </div>
 
-
-                    <button class="btn btn-success mt-3" id="btnKirim" type="submit" name="submit"><i
-                            class="fas fa-paper-plane me-2"></i>Kirim</button>
+                    <div class="d-flex justify-content-center">
+                    <button class="btn btn-lg btn-primary w-100 mt-3" id="btnKirim" type="submit" name="submit"><i
+                            class="fas fa-paper-plane me-2"></i>Kirim Pesanan</button>
                     </button>
+                    </div>
                     </form>
                 </div>
             </div>

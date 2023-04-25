@@ -90,15 +90,15 @@ include('templates_transaksi/sidebar.php'); ?>
                                 <label>Status</label>
                                 <select name="status" class="form-control">
                                     <option <?php if ($status == "Ordered") {
-                                        echo "selected";
+                                        echo "selected='selected'";
                                     }
                                     echo $status ?>  value="Ordered">Ordered</option>
                                     <option <?php if ($status == "Delivered") {
-                                        echo "selected";
+                                        echo "selected='selected'";
                                     }
                                     echo $status ?>  value="Delivered">Delivered</option>
                                     <option <?php if ($status == "Cancelled") {
-                                        echo "selected";
+                                        echo "selected='selected'";
                                     }
                                     echo $status ?> value="Cancelled">Cancelled</option>
                                 </select>
@@ -128,9 +128,8 @@ include('templates_transaksi/sidebar.php'); ?>
                             </div>
 
 
-                            <button name="submit" type="submit" data-toggle="modal"
-                                data-target="#editModalTransaksi-<?= $id ?>" class="btn btn-success"><i
-                                    class="fas fa-pen mr-2"></i>Update Transaction</button>
+                            <button name="submit" type="submit" class="btn btn-success"><i
+                                    class="fas fa-pen mr-1"></i>Update Transaction</button>
 
 
                 </form>
@@ -140,13 +139,8 @@ include('templates_transaksi/sidebar.php'); ?>
     </section>
 </div>
 
-
-<!-- main section ends -->
-
-
 <?php
 
-//check if submit buttton is clicked or not
 if (isset($_POST['submit'])) {
     //update the details
     $total_price = $_POST['total_price'];
@@ -189,30 +183,5 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-<div class="modal fade z-3" id="editModalTransaksi-<?= $id ?>" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Transaksi</h5>
-            </div>
-            <div class="modal-body">
-                Apakah anda yakin ingin mengupdate transaksi
-                <?= $customer_name ?>?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <a href="<?= base_url; ?>administrator/transaksi/updateOrder.php?id=<?= $id ?>" type="button"
-                    class="btn btn-danger">Edit</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<style>
-    .modal-backdrop.show {
-        display: none !important;
-    }
-</style>
 
 <?php include('templates_transaksi/footer.php') ?>

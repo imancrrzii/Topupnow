@@ -51,6 +51,7 @@ if (!isset($_SESSION['user'])) {
   <!-- Template CSS -->
   <link rel="stylesheet" href="<?php echo base_url?>assets/assets_stisla/css/style.css">
   <link rel="stylesheet" href="<?php echo base_url?>assets/assets_stisla/css/components.css">
+  <link rel="shortcut icon" href="<?= base_url ?>assets/prepaid.png">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];

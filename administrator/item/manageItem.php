@@ -38,10 +38,7 @@ class ManageItem
         return $result;
     }
 }
-
 ?>
-
-<!-- main section starts -->
 
 <div class="main-content">
     <section class="section">
@@ -53,38 +50,32 @@ class ManageItem
                 <div class="card card-statistics">
                     <div class="card-body">
                     <div class="datatable-wrapper table-responsive">
-        <!-- button to add admin -->
         <a href="<?php echo base_url; ?>administrator/item/addItem.php" class="btn btn-primary"><i
                 class="fas fa-plus mr-2"></i>Tambah Item</a>
-        <a href="<?php echo base_url; ?>administrator/export_pdf.php" class="btn btn-danger"><i
-                class="fas fa-file-pdf mr-2"></i>Export to PDF</a>
-
         <div class="col-md-12">
             <?php
-            if (isset($_SESSION['addItem'])) { //add session message
-                echo $_SESSION['addItem']; //display session message
-                unset($_SESSION['addItem']); //removing the session
+            if (isset($_SESSION['addItem'])) {
+                echo $_SESSION['addItem']; 
+                unset($_SESSION['addItem']); 
             }
-            if (isset($_SESSION['delete'])) { //add session 
-                echo $_SESSION['delete']; //display session messsage
+            if (isset($_SESSION['delete'])) {  
+                echo $_SESSION['delete']; 
                 unset($_SESSION['delete']);
             }
-            if (isset($_SESSION['update_item'])) { //add session 
-                echo $_SESSION['update_item']; //display session messsage
-                unset($_SESSION['update_item']); //removing the session
+            if (isset($_SESSION['update_item'])) {
+                echo $_SESSION['update_item'];
+                unset($_SESSION['update_item']); 
             }
-            if (isset($_SESSION['no_food'])) { //add session 
-                echo $_SESSION['no_food']; //display session messsage
-                unset($_SESSION['no_food']); //removing the session
+            if (isset($_SESSION['no_food'])) { 
+                echo $_SESSION['no_food']; 
+                unset($_SESSION['no_food']); 
             }
-            if (isset($_SESSION['remove'])) { //add session 
-                echo $_SESSION['remove']; //display session messsage
-                unset($_SESSION['remove']); //removing the session
+            if (isset($_SESSION['remove'])) { 
+                echo $_SESSION['remove']; 
+                unset($_SESSION['remove']); 
             }
             ?>
         </div>
-
-
         <form class="form-inline my-3">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
@@ -105,26 +96,16 @@ class ManageItem
             <?php
             $manageItem = new manageItem($conn);
             $page = isset($_GET['page']) ? $_GET['page'] : 1;
-            $limit = 10;
+            $limit = 5;
             $start = ($page - 1) * $limit;
             $res = $manageItem->getItemLimit($start, $limit);
-            //create a query 
-            //execute the query
-            //check whether the query is executed or not
             if ($res == TRUE) {
-                //query is executed
-                //count no of rows to check whether there is data in database or not
+
                 $count = mysqli_num_rows($res);
 
-                //check if there is data in database
                 if ($count > 0) {
-                    //there is data in database
-            
-                    //for unique id
-                    $sn = 10 * ($page - 1) + 1;
+                    $sn = 5 * ($page - 1) + 1;
                     while ($rows = mysqli_fetch_assoc($res)) {
-
-                        //using while loop to get all data from database
                         $id = $rows['id'];
                         $title = $rows['title'];
                         $description = $rows['description'];
@@ -247,8 +228,5 @@ class ManageItem
         </nav>
     </section>
 </div>
-
-
-<!-- main section ends -->
 
 <?php include('templates_item/footer.php') ?>

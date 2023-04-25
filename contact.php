@@ -111,7 +111,7 @@ class ContactForm
                         <div class="sent-message">Your message has been sent. Thank you!</div>
                     </div>
                     <div class="text-center" data-aos="zoom-in"><button type="submit" name="submit"
-                            class="btn btn-primary"><i class="fas fa-paper-plane mr-2"></i>Send Message</button></div>
+                            class="btn btn-primary"><i class="fas fa-paper-plane me-2"></i>Kirim Pesan</button></div>
                 </form>
                 <?php
                 if (isset($_POST['submit'])) {

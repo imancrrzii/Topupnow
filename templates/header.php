@@ -50,10 +50,9 @@ $conn = $db->getConnection();
                 <li><a href="<?= base_url; ?>contact.php">Kontak</a></li>
                 <li>
                     <form action="<?= base_url; ?>search.php" method="POST" class="d-flex search" role="search">
-                        <input class="form-control me-sm-2" type="search" placeholder="Search" aria-label="Search"
-                            name="search">
-                        <button class="btn btn-primary my-2 my-sm-0" type="submit"><i
-                                class="fas fa-search"></i></button>
+                        <input class="form-control form-control-lg me-2" type="search" placeholder="Search"
+                            aria-label="Search" name="search">
+                        <button class="btn btn-lg btn-primary" type="submit"><i class="fas fa-search"></i></button>
                     </form>
                     </form>
                 </li>

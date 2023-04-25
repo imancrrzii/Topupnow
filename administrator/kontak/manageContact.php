@@ -52,12 +52,6 @@ class ManageContact
                 <div class="card card-statistics">
                     <div class="card-body">
                     <div class="datatable-wrapper table-responsive">
-                        <a href="<?= base_url; ?>administrator/export_pdf_contact.php"><button class="btn btn-danger"><i
-                                    class="fas fa-file-pdf mr-2"></i>Export to
-                                PDF</button></a>
-                        <a href="<?= base_url; ?>administrator/export_excel_contact.php"><button
-                                class="btn btn-success"><i class="fas fa-file-excel mr-2"></i>Export to
-                                Excel</button></a>
                         <div class="col-md-12">
                             <?php
                             if (isset($_SESSION['add'])) {
@@ -99,14 +93,14 @@ class ManageContact
                             <?php
                             $manageContact = new manageContact($conn);
                             $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                            $limit = 10;
+                            $limit = 5;
                             $start = ($page - 1) * $limit;
                             $res = $manageContact->getContactLimit($start, $limit);
 
                             if ($res == TRUE) {
                                 $count = mysqli_num_rows($res);
                                 if ($count > 0) {
-                                    $sn = 10 * ($page - 1) + 1;
+                                    $sn = 5 * ($page - 1) + 1;
                                     while ($rows = mysqli_fetch_assoc($res)) {
                                         $id = $rows['id'];
                                         $name = $rows['name'];

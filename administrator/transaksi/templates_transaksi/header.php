@@ -39,6 +39,7 @@ if (!isset($_SESSION['user'])) {
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Administrator TopupNow</title>
+  <link rel="shortcut icon" href="<?= base_url ?>assets/prepaid.png">
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="<?php echo base_url?>assets/assets_stisla/modules/bootstrap/css/bootstrap.min.css">
