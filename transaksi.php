@@ -314,7 +314,7 @@ if (isset($_POST['submit'])) {
 
 
                     <button class="btn btn-success mt-3" id="btnKirim" type="submit" name="submit"><i
-                            class="fas fa-paper-plane me-2"></i>Kirim Pesanan</button>
+                            class="fas fa-paper-plane me-2"></i>Kirim</button>
                     </button>
                     </form>
                 </div>
