@@ -82,7 +82,7 @@ class ManageItem
         </form>
         <table id="datatable" class="display compact table table-striped">
             <thead>
-                <tr>
+                <tr class="text-center">
                     <th>No</th>
                     <th>Title</th>
                     <th>Description</th>
@@ -115,7 +115,7 @@ class ManageItem
                         $active = $rows['active'];
 
                         ?>
-                        <tr>
+                        <tr class="text-center">
                             <td>
                                 <?php echo $sn++ ?>
                             </td>
@@ -146,7 +146,7 @@ class ManageItem
                                 <?php echo $active ?>
                             </td>
                             <td>
-                                <div class="d-flex">
+                                <div class="d-flex justify-content-center">
 
                                     <a href="<?php echo base_url; ?>administrator/item/updateItem.php?id=<?php echo $id; ?>"><button
                                             class="btn btn-warning mr-1"><i class="fas fa-pen"></i></button></a>

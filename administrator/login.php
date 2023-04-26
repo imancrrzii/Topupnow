@@ -12,7 +12,6 @@ $conn = $db->getConnection();
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <title>Administration TopupNow</title>
     <meta charset="utf-8" />
@@ -34,7 +33,6 @@ $conn = $db->getConnection();
         private $conn;
         private string $username;
         private string $password;
-
         public function __construct($conn)
         {
             $this->conn = $conn;
@@ -42,7 +40,6 @@ $conn = $db->getConnection();
         public function displayForm()
         {
             ?>
-
             <div class="app">
                 <div class="app-wrap">
                     <div class="app-contant">
@@ -52,8 +49,20 @@ $conn = $db->getConnection();
                                     <div class="col-sm-6 col-lg-5 col-xxl-3  align-self-center order-2 order-sm-1">
                                         <div class="d-flex align-items-center h-100-vh">
                                             <div class="login p-50">
-                                                <h1 class="mb-2">TopupNow</h1>
-                                                <form method="POST" action="" class="mt-3 mt-sm-5">
+                                                <h1 class="mb-2 mt-2">TopupNow</h1>
+                                                <h5>
+                                                    <?php
+                                                    if (isset($_SESSION['login_status'])) { 
+                                                        echo $_SESSION['login_status']; 
+                                                        unset($_SESSION['login_status']); 
+                                                    }
+                                                    if (isset($_SESSION['no_login'])) { 
+                                                        echo $_SESSION['no_login'];
+                                                        unset($_SESSION['no_login']); 
+                                                    }
+                                                    ?>
+                                                </h5>
+                                                <form method="POST" action="" class="mt-2 mt-sm-3">
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <div class="form-group">
@@ -100,33 +109,31 @@ $conn = $db->getConnection();
             if (isset($_POST['submit'])) {
                 $this->username = $_POST['username'];
                 $this->password = md5($_POST['password']);
-
                 $sql = "SELECT * FROM administrator WHERE username='$this->username' AND password='$this->password'";
-
                 $res = mysqli_query($this->conn, $sql);
-
                 $count = mysqli_num_rows($res);
-
                 if ($count == 1) {
                     $_SESSION['login_status'] = '<div class="alert alert-success" role="alert">
-                        <i class="fas fa-check mr-2"></i>
-                        Login Successfully
-                    </div>';
+                    <i class="fas fa-tachometer-alt me-2"></i>
+                    Selamat datang di Administrasi Topupnow
+                </div>';
                     $_SESSION['user'] = $this->username;
                     header('location:' . base_url . 'administrator/');
                 } else {
-                    $_SESSION['login_status'] = "<span>Login Unsuccessful!! Username and password do not match</span>";
+                    $_SESSION['login_status'] = '<div class="alert alert-danger" role="alert">
+                    <i class="fas fa-exclamation-triangle mr-1"></i>
+                    Username atau Password yang anda masukkan tidak sesuai
+                </div>';
                     header('location:' . base_url . 'administrator/login.php');
                 }
             }
         }
     }
-
     $form = new LoginForm($conn);
-
     $form->displayForm();
     $form->checkLogin();
     ?>
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

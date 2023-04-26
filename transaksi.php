@@ -97,7 +97,7 @@ if (isset($_POST['submit'])) {
     $type1 = explode('.', $filename);
     $type2 = $type1[1];
     $newName = 'pay' . time() . '.' . $type2;
-    $allow_type = array('jpg', 'jpeg', 'png', 'Png', 'Jpg', 'Jpeg');
+    $allow_type = array('png','jpg','jpeg');
     $upload_dir = 'assets/img/bukti_pembayaran/';
 
     if (!in_array($type2, $allow_type)) {

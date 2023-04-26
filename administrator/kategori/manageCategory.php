@@ -49,7 +49,7 @@ class ManageCategory
                     <div class="card-body">
                         <div class="datatable-wrapper table-responsive">
                             <a href="<?= base_url; ?>administrator/kategori/addCategory.php" class="btn btn-primary"><i
-                                    class="fas fa-plus mr-2"></i>Tambah Kategori</a>
+                                    class="fas fa-plus me-2"></i>Tambah Kategori</a>
                             <div class="col-md-12">
                                 <?php
                                 if (isset($_SESSION['add'])) {
@@ -73,7 +73,7 @@ class ManageCategory
                             </form>
                             <table id="datatable" class="display compact table table-striped">
                                 <thead>
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No</th>
                                         <th>Title</th>
                                         <th>Image</th>
@@ -82,7 +82,6 @@ class ManageCategory
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
-
                                 <?php
                                 $manageCategory = new manageCategory($conn);
                                 $page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -100,7 +99,7 @@ class ManageCategory
                                             $featured = $rows['featured'];
                                             $active = $rows['active'];
                                             ?>
-                                            <tr>
+                                            <tr class="text-center">
                                                 <td>
                                                     <?= $sn ?>
                                                 </td>
@@ -126,7 +125,7 @@ class ManageCategory
                                                     <?= $active ?>
                                                 </td>
                                                 <td>
-                                                    <div class="d-flex">
+                                                    <div class="d-flex justify-content-center">
                                                         <a
                                                             href="<?= base_url; ?>administrator/kategori/updateCategory.php?id=<?= $id; ?>"><button
                                                                 class="btn btn-warning mr-1"><i
@@ -142,7 +141,6 @@ class ManageCategory
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title" id="exampleModalLabel">Hapus Kategori</h5>
-
                                                         </div>
                                                         <div class="modal-body">
                                                             Apakah anda yakin ingin menghapus admin

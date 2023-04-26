@@ -62,10 +62,16 @@ class AddAdmin
                                 <input type="password" class="form-control" name="password" placeholder="Password"
                                     required>
                             </div>
-                            <button class="btn btn-success" type="submit" name="submit"
-                                onclick="return confirm('Apakah anda yakin untuk memesan ini?')"><i
-                                    class="fas fa-save mr-2"></i>Simpan</button>
-                            <button class="btn btn-danger" type="reset"><i class="fas fa-trash mr-2"></i>Reset</button>
+                            
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-danger mr-2" type="reset"><i
+                                            class="fas fa-trash mr-1"></i>Reset</button>
+                                    <button class="btn btn-success" type="submit" name="submit"
+                                        onclick="return confirm('Apakah anda yakin untuk memesan ini?')"><i
+                                            class="fas fa-save mr-1"></i>Simpan</button>
+
+                                </div>
+                                
                 </form>
             </div>
     </section>
@@ -91,3 +97,4 @@ class AddAdmin
         }
     }
     ?>
+    <?php include('templates_admin/footer.php'); ?>

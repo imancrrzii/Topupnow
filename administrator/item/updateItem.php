@@ -5,10 +5,9 @@ include('templates_item/sidebar.php'); ?>
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Edit data item</h1>
+            <h1>Edit Data Item</h1>
         </div>
         <div class="col-md-12">
-
             <?php
             if (isset($_SESSION['update'])) {
                 echo $_SESSION['update'];
@@ -86,7 +85,6 @@ include('templates_item/sidebar.php'); ?>
                                 <label>Image baru</label>
                                 <input type="file" name="image" id="image" class="form-control">
                             </div>
-
                             <div class="form-group">
                                 <label>Active Category</label>
                                     <select name="category" class="form-control" required="">
@@ -105,7 +103,6 @@ include('templates_item/sidebar.php'); ?>
                                                                 echo $active ?>
                                                                     value="<?php echo $category_id; ?>">
                                                                         <?php echo $category_title; ?>
-                                                    
                                                                 </option>
                                                                 <?php
                                             }
@@ -118,7 +115,6 @@ include('templates_item/sidebar.php'); ?>
                                         } ?>
                                     </select>
                                 </div>
-
                             <div class="form-group">
                                 <label>Featured</label>
                                 <select name="featured" class="form-control" required="">
@@ -132,7 +128,6 @@ include('templates_item/sidebar.php'); ?>
                                 echo $featured ?> value="NO">NO</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
                                 <label>Active</label>
                                 <select name="active" class="form-control" required="">
@@ -145,15 +140,16 @@ include('templates_item/sidebar.php'); ?>
                                 }
                                 echo $active ?> value="NO">NO</option>
                                 </select>
-
                             </div>
-
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                             <input type="hidden" name="current_image_name" value="<?php echo $current_image_name; ?>">
+                            <div class="d-flex justify-content-end">
+                            <button class="btn btn-danger mr-2" type="reset"><i class="fas fa-trash mr-2"></i>Reset</button>
                             <button class="btn btn-success" type="submit" name="submit"
                                 onclick="return confirm('Apakah anda yakin untuk memesan ini?')"><i
-                                    class="fas fa-save mr-2"></i>Update Administrator</button>
-                            <button class="btn btn-danger" type="reset"><i class="fas fa-trash mr-2"></i>Reset</button>
+                                    class="fas fa-save mr-2"></i>Update Item</button>
+                            
+                            </div>
                 </form>
             </div>
     </section>

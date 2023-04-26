@@ -2,39 +2,29 @@
 ob_start();
 include('templates_transaksi/header.php');
 include('templates_transaksi/sidebar.php'); ?>
-<!-- main section starts -->
 
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Edit data item</h1>
+            <h1>Validasi Data Transaksi</h1>
         </div>
         <div class="col-md-12">
             <?php
-            if (isset($_SESSION['update'])) { //add session message
-                echo $_SESSION['update']; //display session message
-                unset($_SESSION['update']); //removing the session
+            if (isset($_SESSION['update'])) {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
             }
             ?>
         </div>
 
         <?php
         if (isset($_GET['id'])) {
-            //get the id of the admin selected
             $id = $_GET['id'];
-
-            //create sql suery
             $sql = "SELECT * FROM pesanan WHERE id=$id";
-
-            //execute the query
             $res = mysqli_query($conn, $sql);
-
-            //check whether the query is executed or not
             if ($res == true) {
-                //check if data is available or not
                 $count = mysqli_num_rows($res);
                 if ($count == 1) {
-                    //get the details
                     $rows = mysqli_fetch_assoc($res);
                     $item = $rows['item'];
                     $price = $rows['price'];
@@ -48,15 +38,12 @@ include('templates_transaksi/sidebar.php'); ?>
 
                 }
             } else {
-                //redirect to managAdmin page
                 header('location:' . base_url . 'administrator/transaksi/manageOrder.php');
             }
         } else {
             header('location:' . base_url . 'administrator/transaksi/manageOrder.php');
         }
         ?>
-
-
 
         <div class="card">
             <div class="card-body">
@@ -67,7 +54,6 @@ include('templates_transaksi/sidebar.php'); ?>
                                 <i class="fas fa-file mr-2"></i>
                                 Fill in Your Information
                             </div>
-
                             <div class="form-group">
                                 <label>Item</label>
                                 <input type="text" class="form-control" value="<?php echo $item; ?>" readonly>
@@ -92,18 +78,17 @@ include('templates_transaksi/sidebar.php'); ?>
                                     <option <?php if ($status == "Ordered") {
                                         echo "selected='selected'";
                                     }
-                                    echo $status ?>  value="Ordered">Ordered</option>
+                                    echo $status ?> value="Ordered">Ordered</option>
                                     <option <?php if ($status == "Delivered") {
                                         echo "selected='selected'";
                                     }
-                                    echo $status ?>  value="Delivered">Delivered</option>
+                                    echo $status ?> value="Delivered">Delivered</option>
                                     <option <?php if ($status == "Cancelled") {
                                         echo "selected='selected'";
                                     }
                                     echo $status ?> value="Cancelled">Cancelled</option>
                                 </select>
                             </div>
-
                             <div class="form-group">
                                 <label>Id Customer</label>
                                 <input type="text" class="form-control" name="customer_id_game"
@@ -114,27 +99,22 @@ include('templates_transaksi/sidebar.php'); ?>
                                 <input type="text" class="form-control" name="customer_contact"
                                     value="<?php echo $customer_contact; ?>" readonly>
                             </div>
-
                             <div class="form-group">
                                 <label>Email Customer</label>
                                 <input type="text" class="form-control" name="customer_email"
                                     value="<?php echo $customer_email; ?>" readonly>
                             </div>
-
                             <div class="form-group">
                                 <label>Metode Pembayaran</label>
                                 <input type="text" class="form-control" name="customer_pay"
                                     value="<?php echo $customer_pay; ?>" readonly>
                             </div>
-
-
+                            <div class="d-flex justify-content-end">
                             <button name="submit" type="submit" class="btn btn-success"><i
-                                    class="fas fa-pen mr-1"></i>Update Transaction</button>
-
-
+                                    class="fas fa-clipboard-check mr-1"></i>Update Transaction</button>
+                            </div>
                 </form>
             </div>
-
         </div>
     </section>
 </div>
@@ -142,7 +122,6 @@ include('templates_transaksi/sidebar.php'); ?>
 <?php
 
 if (isset($_POST['submit'])) {
-    //update the details
     $total_price = $_POST['total_price'];
     $status = $_POST['status'];
     $customer_id_game = $_POST['customer_id_game'];
@@ -151,8 +130,6 @@ if (isset($_POST['submit'])) {
     $customer_email = $_POST['customer_email'];
     $customer_pay = $_POST['customer_pay'];
 
-
-    //create sql query to update admin
     $sql2 = "UPDATE pesanan
         SET total_price='$total_price',
             status='$status',
@@ -163,23 +140,18 @@ if (isset($_POST['submit'])) {
             customer_email='$customer_email'
         WHERE id='$id'
         ";
-    //execue the query
 
     $res2 = mysqli_query($conn, $sql2);
     if ($res2 == TRUE) {
-        //Query executed and order updated
         $_SESSION['update'] = '<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
         <i class="fas fa-trash mr-3"></i>Data berhasil diubah!<button type="button" class="close"
             data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-        //redirect to manageAdminpage
         header('location:' . base_url . 'administrator/transaksi/manageOrder.php');
     } else {
-        //Failed to update order
         $_SESSION['update'] = '<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
         <i class="fas fa-trash mr-3"></i>Data gagal diubah!<button type="button" class="close"
             data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
         header('location:' . base_url . 'administrator/transaksi/updateOrder.php');
-
     }
 }
 ?>

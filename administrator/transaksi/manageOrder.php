@@ -70,7 +70,7 @@ class ManageOrder
                                 <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                             </form>
 
-                            <table id="datatable" class="display compact table table-striped table-bordered">
+                            <table id="datatable" class="display compact table table-striped">
                                 <thead>
                                     <tr class="text-center">
                                         <th>No</th>
@@ -126,9 +126,9 @@ class ManageOrder
                                     <td>
                                         <?php
                                                     if ($status == "Ordered") {
-                                                        echo "<span class='badge badge-warning'><i class='fas fa-user-clock mr-2'></i>$status </span>";
+                                                        echo "<span class='badge badge-warning'><i class='fas fa-user-clock me-2'></i>$status </span>";
                                                     } else if ($status == "Delivered") {
-                                                        echo "<span class='badge badge-success'><i class='fas fa-truck mr-2'></i>$status </span>";
+                                                        echo "<span class='badge badge-success'><i class='fas fa-truck me-2'></i>$status </span>";
                                                     } else {
                                                         echo "<span class='badge badge-danger'><i class='fas fa-truck'></i>$status </span>";
                                                     }
@@ -162,14 +162,14 @@ class ManageOrder
                                                     }
                                                     ?>
                                     <td>
-                                        <div class="d-flex">
+                                        <div class="d-flex justify-content-center">
                                             <a
                                                 href="<?= base_url; ?>administrator/transaksi/detailOrder.php?id=<?= $id; ?>"><button
                                                     class="btn btn-primary mr-1"><i class="fas fa-eye"></i></button></a>
                                             <a
                                                 href="<?= base_url; ?>administrator/transaksi/updateOrder.php?id=<?= $id; ?>"><button
                                                     class="btn btn-warning mr-1"><i
-                                                        class="fas fa-pen"></i></button></a>
+                                                        class="fas fa-clipboard-check"></i></button></a>
                                             <button data-toggle="modal" data-target="#hapusModalTransaksi-<?= $id ?>"
                                                 class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                         </div>
@@ -223,7 +223,6 @@ class ManageOrder
                                     <li class="page-item"><a class="page-link"
                                             href="?page=<?= $previous_page ?>">Previous</a></li>
                                     <?php } ?>
-
                                     <?php
                                     for ($i = 1; $i <= $total_pages; $i++) {
                                         if ($i == $page) {
@@ -235,7 +234,6 @@ class ManageOrder
                                     <li class="page-item <?= $active ?>"><a class="page-link"
                                             href="?page=<?= $i ?>"><?= $i ?></a></li>
                                     <?php } ?>
-
                                     <?php if ($next_page <= $total_pages) { ?>
                                     <li class="page-item"><a class="page-link" href="?page=<?= $next_page ?>">Next</a>
                                     </li>
@@ -244,7 +242,6 @@ class ManageOrder
                             </nav>
     </section>
 </div>
-
 <div class="modal fade" id="hapusModalOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -266,6 +263,4 @@ class ManageOrder
         </div>
     </div>
 </div>
-<!-- main section ends -->
-
 <?php include('templates_transaksi/footer.php') ?>

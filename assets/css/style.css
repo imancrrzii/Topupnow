@@ -2681,7 +2681,6 @@ mark {
   transform: translateZ(0) scale(0.98);
   backface-visibility: hidden;
   transform-origin: 0 0;
-  /* see note above */
 }
 
 .ldio-vhc98ikw0d div {

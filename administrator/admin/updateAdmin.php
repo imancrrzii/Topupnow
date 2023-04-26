@@ -3,16 +3,19 @@ ob_start();
 include('templates_admin/header.php');
 include('templates_admin/sidebar.php'); ?>
 <?php
-class UpdateAdmin {
+class UpdateAdmin
+{
   private $id;
   private $conn;
 
-  public function __construct($id, $conn) {
+  public function __construct($id, $conn)
+  {
     $this->id = $id;
     $this->conn = $conn;
   }
 
-  public function getAdminData() {
+  public function getAdminData()
+  {
     $sql = "SELECT * FROM administrator WHERE id=$this->id";
     $res = mysqli_query($this->conn, $sql);
     if ($res == true) {
@@ -25,7 +28,8 @@ class UpdateAdmin {
       header('location:' . base_url . 'administrator/admin/manageAdmin.php');
     }
   }
-  public function updateAdminData($full_name, $username) {
+  public function updateAdminData($full_name, $username)
+  {
     $sql = "UPDATE administrator 
             SET full_name='$full_name',
                 username='$username'
@@ -85,11 +89,15 @@ if (isset($_POST['submit'])) {
                 <label>Username</label>
                 <input type="text" class="form-control" name="username" value="<?php echo $adminData['username']; ?>">
               </div>
-              <button class="btn btn-success" type="submit" name="submit" onclick="return confirm('Apakah anda yakin untuk memesan ini?')">
+              <div class="d-flex justify-content-end">
+              <button class="btn btn-success" type="submit" name="submit"
+                onclick="return confirm('Apakah anda yakin untuk memesan ini?')">
                 <i class="fas fa-save mr-2"></i>Update Administrator</button>
+              </div>
             </div>
           </div>
         </form>
       </div>
     </div>
   </section>
+  <?php include('templates_admin/footer.php'); ?>

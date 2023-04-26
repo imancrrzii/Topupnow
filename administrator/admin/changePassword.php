@@ -17,7 +17,6 @@ class ChangePassword {
         $confirmPassword = md5($confirmPassword);
         $sql = "SELECT * FROM administrator WHERE id=$id AND password='$currentPassword'";
         $res = mysqli_query($this->conn, $sql);
-
         if ($res == TRUE) {
             $count = mysqli_num_rows($res);
             if ($count == 1) {
@@ -91,11 +90,15 @@ if (isset($_POST['submit'])) {
                         <input type="password" class="form-control" name="confirmPassword"
                             placeholder="Confirm Password" required>
                     </div>
+                    <div class="d-flex justify-content-end">
+                    <button class="btn btn-danger mr-2" type="reset"><i class="fas fa-trash mr-2"></i>Reset</button>
                     <button class="btn btn-success" type="submit" name="submit"
                         onclick="return confirm('Apakah anda yakin untuk memesan ini?')"><i
                             class="fas fa-save mr-2"></i>Change password</button>
-                    <button class="btn btn-danger" type="reset"><i class="fas fa-trash mr-2"></i>Reset</button>
+                    
+                    </div>
                 </form>
             </div>
         </div>
     </section>
+    <?php include('templates_admin/footer.php'); ?>

@@ -7,7 +7,6 @@ define('base_url', $base_url->getBaseUrl());
 $db = new Database();
 $conn = $db->getConnection();
 
-//get the id of admin to be deleted
 class Item {
     private $conn;
     
@@ -31,10 +30,8 @@ class Item {
     }
 }
 
-// Instantiate the Admin class and pass the database connection as an argument
 $item = new Item($conn);
 
-// Call the deleteAdmin function passing the id from $_GET as an argument
 $id = $_GET['id'];
 $item->deleteItem($id);
 ?>

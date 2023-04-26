@@ -27,7 +27,6 @@ class ContactForm
             echo '<script>alert("Pesan telah terkirim!!")</script>';
             echo ("<script>location.href = '" . base_url . "';</script>");
         } else {
-            //insert new message
             $sql2 = "INSERT INTO kontak SET
                 name = '$this->name',
                 email = '$this->email',
@@ -35,7 +34,6 @@ class ContactForm
                 message = '$this->message'
                 ";
             $res2 = mysqli_query($conn, $sql2);
-
             if ($res2 == TRUE) {
                 echo '<script>
                 $(document).ready(function(){
@@ -57,7 +55,6 @@ class ContactForm
         <div class="section-title" data-aos="fade-up">
             <h2>Contact Us</h2>
         </div>
-
         <div class="row">
             <div class="col-lg-6 d-flex" data-aos="zoom-in">
                 <div class="info-box" data-aos="zoom-in">
@@ -66,7 +63,6 @@ class ContactForm
                     <p>Jl. Raya Palembang - Prabumulih Km. 32 Indralaya, OI, Sumatera Selatan</p>
                 </div>
             </div>
-
             <div class="col-lg-3 d-flex" data-aos="zoom-in">
                 <div class="info-box" data-aos="zoom-in">
                     <i class="fas fa-envelope"></i>
@@ -74,7 +70,6 @@ class ContactForm
                     <p>Group5@gmail.com<br>Kelompok5@gmail.com</p>
                 </div>
             </div>
-
             <div class="col-lg-3 d-flex" data-aos="zoom-in">
                 <div class="info-box " data-aos="zoom-in">
                     <i class="fas fa-phone-volume"></i>
@@ -136,7 +131,7 @@ class ContactForm
                     </div>
                     <div class="modal-footer">
                         <button onclick="location.href='<?php echo base_url ?>'" type="button" class="btn btn-primary"
-                            data-bs-dismiss="modal"><i class="fas fa-undo-alt mr-2"></i>Kembali ke halaman
+                            data-bs-dismiss="modal"><i class="fas fa-undo-alt me-2"></i>Kembali ke halaman
                             utama</button>
                     </div>
                 </div>

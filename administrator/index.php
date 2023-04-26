@@ -4,7 +4,6 @@ include('templates/sidebar.php');
 ?>
 
 <?php
-
 class AdminDashboard
 {
     private $conn;
@@ -70,7 +69,14 @@ class AdminDashboard
                     <h1>Dashboard</h1>
                 </div>
                 <div class="row">
-
+                    <div class="col-12">
+                        <?php
+                        if (isset($_SESSION['login_status'])) {
+                            echo $_SESSION['login_status'];
+                            unset($_SESSION['login_status']);
+                        }
+                        ?>
+                    </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/admin/manageAdmin.php">
                             <div class="card card-statistic-1">
@@ -79,7 +85,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Admin</h4>
+                                        <h4>Administrator</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getAdminCount() ?>
@@ -88,8 +94,6 @@ class AdminDashboard
                             </div>
                         </a>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/kategori/manageCategory.php">
                             <div class="card card-statistic-1">
@@ -98,7 +102,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Kategori</h4>
+                                        <h4>Kategori</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getCategoriesCount() ?>
@@ -107,8 +111,6 @@ class AdminDashboard
                             </div>
                         </a>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/item/manageItem.php">
                             <div class="card card-statistic-1">
@@ -117,7 +119,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Item</h4>
+                                        <h4>Item</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getFoodsCount() ?>
@@ -126,8 +128,6 @@ class AdminDashboard
                             </div>
                         </a>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/transaksi/manageOrder.php">
                             <div class="card card-statistic-1">
@@ -136,7 +136,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Pesanan</h4>
+                                        <h4>Pesanan</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getOrdersCount(); ?>
@@ -146,8 +146,6 @@ class AdminDashboard
                             </div>
                         </a>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/transaksi/manageOrder.php">
                             <div class="card card-statistic-1">
@@ -156,7 +154,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Pendapatan</h4>
+                                        <h4>Pendapatan</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getTotalRevenue() ?>
@@ -165,8 +163,6 @@ class AdminDashboard
                             </div>
                         </a>
                     </div>
-
-
                     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                         <a href="<?php echo base_url; ?>administrator/kontak/manageContact.php">
                             <div class="card card-statistic-1">
@@ -175,7 +171,7 @@ class AdminDashboard
                                 </div>
                                 <div class="card-wrap">
                                     <div class="card-header">
-                                        <h4>Total Pesan</h4>
+                                        <h4>Saran</h4>
                                     </div>
                                     <div class="card-body">
                                         <?php echo $this->getContactCount() ?>

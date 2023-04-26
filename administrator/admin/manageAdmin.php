@@ -13,7 +13,6 @@ class ManageAdmin
     {
         $this->conn = $conn;
     }
-
     public function getAdmins()
     {
         $sql = "SELECT * FROM administrator";
@@ -22,7 +21,6 @@ class ManageAdmin
             $sql .= " WHERE full_name LIKE '%$searchTerm%' OR username LIKE '%$searchTerm%'";
         }
         $res = mysqli_query($this->conn, $sql);
-
         return $res;
     }
     public function getAdminsLimit($start, $limit)
@@ -33,7 +31,6 @@ class ManageAdmin
         } else {
             $sql = "SELECT * FROM administrator ORDER BY id ASC LIMIT $start, $limit";
         }
-
         $result = mysqli_query($this->conn, $sql);
         return $result;
     }
@@ -89,24 +86,21 @@ class ManageAdmin
                                     aria-label="Search" name="search">
                                 <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
                             </form>
-
-                            <table id="datatable" class="display compact table table-striped table-bordered">
+                            <table id="datatable" class="display compact table table-striped">
                                 <thead>
-                                    <tr>
+                                    <tr class="text-center">
                                         <th>No</th>
                                         <th>Full name</th>
                                         <th>Username</th>
                                         <th>Actions</th>
-                                    </tr>
+                                    </trc>
                                 </thead>
-
                                 <?php
                                 $manageAdmin = new ManageAdmin($conn);
                                 $page = isset($_GET['page']) ? $_GET['page'] : 1;
                                 $limit = 5;
                                 $start = ($page - 1) * $limit;
                                 $res = $manageAdmin->getAdminsLimit($start, $limit);
-
                                 if ($res == TRUE) {
                                     $count = mysqli_num_rows($res);
                                     if ($count > 0) {
@@ -116,8 +110,7 @@ class ManageAdmin
                                             $full_name = $rows['full_name'];
                                             $username = $rows['username'];
                                             ?>
-
-                                            <tr>
+                                            <tr class="text-center">
                                                 <td>
                                                     <?= $sn ?>
                                                 </td>
@@ -128,7 +121,7 @@ class ManageAdmin
                                                     <?= $username ?>
                                                 </td>
                                                 <td>
-                                                <div class="d-flex">
+                                                <div class="d-flex justify-content-center">
                                                     <a href="<?= base_url; ?>administrator/admin/changePassword.php?id=<?= $id; ?>"><button
                                                             class="btn btn-primary mr-1"><i class="fas fa-key"></i></button></a>
                                                     <a href="<?= base_url; ?>administrator/admin/updateAdmin.php?id=<?= $id; ?>"><button
@@ -144,7 +137,6 @@ class ManageAdmin
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <h5 class="modal-title" id="exampleModalLabel">Hapus Admin</h5>
-
                                                         </div>
                                                         <div class="modal-body">
                                                             Apakah anda yakin ingin menghapus admin
@@ -159,7 +151,6 @@ class ManageAdmin
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <style>
                                                 .modal-backdrop.show {
                                                     display: none !important;
@@ -202,7 +193,6 @@ class ManageAdmin
                                         ?>
                                         <li class="page-item <?= $active ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
                                     <?php } ?>
-
                                     <?php if ($next_page <= $total_pages) { ?>
                                         <li class="page-item"><a class="page-link" href="?page=<?= $next_page ?>">Next</a>
                                         </li>

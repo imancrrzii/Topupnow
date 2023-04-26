@@ -6,7 +6,6 @@ define('base_url', $base_url->getBaseUrl());
 
 $db = new Database();
 $conn = $db->getConnection();
-//get the id & image name of category to be deleted
 class Kategori {
     private $conn;
     
@@ -30,10 +29,8 @@ class Kategori {
     }
 }
 
-// Instantiate the Admin class and pass the database connection as an argument
 $kategori = new Kategori($conn);
 
-// Call the deleteAdmin function passing the id from $_GET as an argument
 $id = $_GET['id'];
 $kategori->deleteCategory($id);
 ?>

@@ -26,7 +26,7 @@ class SearchResult
                 $title = $rows['title'];
                 $image_name = $rows['image_name'];
                 ?>
-                <a href="<?= base_url . 'categoryItem.php?id=' . $id; ?>">
+                <a href="<?= base_url . 'item.php?id=' . $id; ?>">
                     <div class="box" data-aos="zoom-in">
                         <?php if ($image_name == ''): ?>
                             <img src="<?= base_url . 'img.png'; ?>" alt="">
@@ -46,7 +46,7 @@ class SearchResult
                 data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
         }
     }
-
+    
     public function displayHome()
     {
         ?>

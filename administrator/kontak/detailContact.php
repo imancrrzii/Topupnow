@@ -2,7 +2,6 @@
 ob_start();
 include('templates_kontak/header.php');
 include('templates_kontak/sidebar.php'); ?>
-<!-- main section starts -->
 <?php
 
 class ContactDetail
@@ -28,7 +27,6 @@ class ContactDetail
         if ($res == true) {
             $count = mysqli_num_rows($res);
             if ($count == 1) {
-                //get the details
                 $rows = mysqli_fetch_assoc($res);
                 $this->name = $rows['name'];
                 $this->email = $rows['email'];
@@ -78,9 +76,8 @@ class ContactDetail
                         </td>
                     </tr>
                 </table>
-                <a href="<?php echo base_url ?>administrator/kontak/manageContact.php" class="btn btn-primary ml-4"><i
-                        class="fas fa-undo-alt mr-1"></i>Back</a>
-
+                <a href="<?php echo base_url ?>administrator/kontak/manageContact.php" class="btn btn-primary"><i
+                        class="fas fa-undo-alt mr-1"></i>Kembali</a>
             </div>
         </div>
 </div>
@@ -99,3 +96,4 @@ if (isset($_GET['id'])) {
 }
 
 ?>
+<?php include('templates_kontak/footer.php') ?>

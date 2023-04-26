@@ -50,7 +50,7 @@ class TransactionDetail
             header('location:' . base_url . 'administrator/transaksi/manageOrder.php');
         }
     }
-
+    
     public function view()
     {
         ?>
@@ -146,3 +146,4 @@ if (isset($_GET['id'])) {
 }
 
 ?>
+<?php include('templates_transaksi/footer.php') ?>

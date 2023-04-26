@@ -8,8 +8,8 @@ class Database {
         define('DB_USERNAME','root');
         define('DB_PASSWORD','');
         define('DB_NAME','pplbo');
-        $this->conn = mysqli_connect(LOCALHOST,DB_USERNAME,DB_PASSWORD) or die(mysqli_error());  //Database connection
-        $this->db_select = mysqli_select_db($this->conn, DB_NAME) or die(mysqli_error());  //Database selection
+        $this->conn = mysqli_connect(LOCALHOST,DB_USERNAME,DB_PASSWORD) or die(mysqli_error($this->conn)); 
+        $this->db_select = mysqli_select_db($this->conn, DB_NAME) or die(mysqli_error($this->conn)); 
     }
 
     public function getConnection() {
