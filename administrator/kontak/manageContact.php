@@ -108,7 +108,6 @@ class ManageContact
                                             $subject = $rows['subject'];
                                             $message = $rows['message'];
                                             ?>
-
                                             <tr class="text-center">
                                                 <td>
                                                     <?= $sn ?>
@@ -134,7 +133,6 @@ class ManageContact
                                                             class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                                     </div>
                                                 </td>
-
                                             </tr>
                                             <div class="modal fade z-3" id="hapusModalKontak-<?= $id ?>" tabindex="-1" role="dialog"
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -157,7 +155,6 @@ class ManageContact
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <style>
                                                 .modal-backdrop.show {
                                                     display: none !important;
@@ -184,15 +181,12 @@ class ManageContact
                                 $next_page = $page + 1;
                                 ?>
                             </table>
-
-
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-center">
                                     <?php if ($previous_page > 0) { ?>
                                         <li class="page-item"><a class="page-link"
                                                 href="?page=<?= $previous_page ?>">Previous</a></li>
                                     <?php } ?>
-
                                     <?php
                                     for ($i = 1; $i <= $total_pages; $i++) {
                                         if ($i == $page) {
@@ -203,13 +197,16 @@ class ManageContact
                                         ?>
                                         <li class="page-item <?= $active ?>"><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
                                     <?php } ?>
-
                                     <?php if ($next_page <= $total_pages) { ?>
                                         <li class="page-item"><a class="page-link" href="?page=<?= $next_page ?>">Next</a>
                                         </li>
                                     <?php } ?>
                                 </ul>
                             </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 </div>
 <?php include('templates_kontak/footer.php') ?>

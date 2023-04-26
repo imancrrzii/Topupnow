@@ -163,13 +163,12 @@ class ManageOrder
                                                     ?>
                                     <td>
                                         <div class="d-flex justify-content-center">
-                                            <a
-                                                href="<?= base_url; ?>administrator/transaksi/detailOrder.php?id=<?= $id; ?>"><button
+                                            <a href="<?= base_url; ?>administrator/transaksi/detailOrder.php?id=<?= $id; ?>"><button
                                                     class="btn btn-primary mr-1"><i class="fas fa-eye"></i></button></a>
-                                            <a
-                                                href="<?= base_url; ?>administrator/transaksi/updateOrder.php?id=<?= $id; ?>"><button
-                                                    class="btn btn-warning mr-1"><i
-                                                        class="fas fa-clipboard-check"></i></button></a>
+                                            <a href="<?= base_url; ?>administrator/transaksi/updateOrder.php?id=<?= $id; ?>"><button
+                                                    class="btn btn-warning mr-1"><i class="fas fa-clipboard-check"></i></button></a>
+                                            <?php if($pay_img != '') { ?>
+                                            <a href="<?= base_url; ?>assets/img/bukti_pembayaran/<?= $pay_img ?>" download><button class="btn btn-success mr-1"><i class="fas fa-download"></i></button></a><?php } ?>
                                             <button data-toggle="modal" data-target="#hapusModalTransaksi-<?= $id ?>"
                                                 class="btn btn-danger"><i class="fas fa-trash"></i></button>
                                         </div>
@@ -204,7 +203,6 @@ class ManageOrder
                                 <?php
                                             $sn++;
                                         }
-
                                     } else {
                                         ?>
                                 <?php
@@ -216,7 +214,6 @@ class ManageOrder
                                 $next_page = $page + 1;
                                 ?>
                             </table>
-
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-center">
                                     <?php if ($previous_page > 0) { ?>

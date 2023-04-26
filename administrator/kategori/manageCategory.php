@@ -143,7 +143,7 @@ class ManageCategory
                                                             <h5 class="modal-title" id="exampleModalLabel">Hapus Kategori</h5>
                                                         </div>
                                                         <div class="modal-body">
-                                                            Apakah anda yakin ingin menghapus admin
+                                                            Apakah anda yakin ingin menghapus kategori
                                                             <?= $title ?>?
                                                         </div>
                                                         <div class="modal-footer">

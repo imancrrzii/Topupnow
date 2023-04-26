@@ -80,9 +80,9 @@ if (isset($_POST['submit'])) {
     $status = "Ordered";
 
     if ($customer_pay == 'TELKOMSEL') {
-        $tax_rate = 1.1;
+        $tax_rate = 1.05;
     } else if ($customer_pay == 'DANA' || $customer_pay == 'GOPAY') {
-        $tax_rate = 0.96;
+        $tax_rate = 0.98;
     } else if ($customer_pay == 'BCA' || $customer_pay == 'BRI') {
         $tax_rate = 1;
     } else {
@@ -116,7 +116,7 @@ if (isset($_POST['submit'])) {
     <div class="row">
         <div class="col-lg-5 mb-5">
             <div class="card" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
-                <h3 class="card-header bg-light"><i class="bi bi-info-circle-fill me-2"></i>Cara topup</h3>
+                <h5 class="card-header bg-primary text-white"><i class="bi bi-info-circle-fill me-2"></i>Cara topup</h5>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
 
@@ -133,7 +133,7 @@ if (isset($_POST['submit'])) {
                         <h5>4. Screenshot Bukti Pembayaran</h5>
                         <h5>5. Tunggu Administrator menyelesaikan pembelianmu</h5>
                         <h5>6. Produk akan ditambahkan ke akun permainanmu</h5>
-                        <h3 class="card-header bg-light mb-3 mt-3">Informasi Pembayaran</h3>
+                        <h5 class="card-header bg-primary text-white mb-3 mt-3">Informasi Pembayaran</h5>
                         <div class="accordion" id="accordionFlushExample">
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
@@ -224,15 +224,15 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="col-lg-7 mb-5">
             <div class="card" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
-                <h3 class="card-header bg-light">Masukkan Data anda!</h3>
+                <h5 class="card-header bg-primary text-white">Masukkan data anda!</h5>
                 <div class="card-body">
-                    <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
+                    <div class="alert alert-primary alert-dismissible fade show mt-2" role="alert">
                         <i class="bi bi-1-circle-fill me-2"></i>Masukkan User ID
                     </div>
                     <label>ID Game</label>
-                    <input type="text" class="form-control form-control-lg mb-2" name="customer_id_game"
+                    <input type="text" class="form-control form-control-lg mb-5" name="customer_id_game"
                         placeholder="Masukkan id game anda" required>
-                    <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
+                    <div class="alert alert-primary alert-dismissible fade show mt-2" role="alert">
                         <i class="bi bi-2-circle-fill me-2"></i>Masukkan Email
                     </div>
                     <label>Nama</label>
@@ -243,11 +243,10 @@ if (isset($_POST['submit'])) {
                         placeholder="Masukkan nomor telepon anda" required>
                     <label>Email</label>
                     <div class="inputBox">
-                        <input type="email" class="form-control form-control-lg mb-2" name="customer_email"
+                        <input type="email" class="form-control form-control-lg mb-5" name="customer_email"
                             placeholder="Masukkan email anda" required>
                     </div>
-
-                    <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
+                    <div class="alert alert-primary alert-dismissible fade show mt-2" role="alert">
                         <i class="bi bi-3-circle-fill me-2"></i>Pilih Pembayaran
                     </div>
                     <div class="section over-hide z-bigger">
@@ -258,13 +257,13 @@ if (isset($_POST['submit'])) {
                                         name="customer_pay" id="tool-1" checked>
                                     <label class="for-checkbox-customer_pay" for="tool-1">
                                         <i class='bx bx-credit-card-alt me-2'></i>TELKOMSEL
-                                        <?= number_format($price * 1.1) ?>
+                                        <?= number_format($price * 1.05) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="DANA" name="customer_pay"
                                         id="tool-2">
                                     <label class="for-checkbox-customer_pay" for="tool-2">
                                         <i class='bx bx-credit-card-alt me-2'></i>DANA
-                                        <?= number_format($price * 0.96) ?>
+                                        <?= number_format($price * 0.98) ?>
                                     </label>
                                     <input class="checkbox-customer_pay" type="radio" value="BCA" name="customer_pay"
                                         id="tool-3">
@@ -282,14 +281,14 @@ if (isset($_POST['submit'])) {
                                         id="tool-5">
                                     <label class="for-checkbox-customer_pay" for="tool-5">
                                         <i class='bx bxs-credit-card me-2'></i>GOPAY
-                                        <?= number_format($price * 0.96) ?>
+                                        <?= number_format($price * 0.98) ?>
                                     </label>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="alert alert-secondary alert-dismissible fade show mt-2" role="alert">
+                    <div class="alert alert-primary alert-dismissible fade show mt-4" role="alert">
                         <i class="bi bi-4-circle-fill me-2"></i>Upload Bukti Pembayaran
                     </div>
                     <div class="form-group">

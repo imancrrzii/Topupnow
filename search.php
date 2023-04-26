@@ -42,8 +42,7 @@ class SearchResult
             }
         } else {
             echo '<div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
-            <i class="fas fa-times mr-2"></i>Kategori Tidak Ditemukan!<button type="button" class="close"
-                data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            <i class="fas fa-times-circle me-2"></i>Kategori Tidak Ditemukan!</div>';
         }
     }
     

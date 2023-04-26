@@ -56,10 +56,6 @@ $conn = $db->getConnection();
                                                         echo $_SESSION['login_status']; 
                                                         unset($_SESSION['login_status']); 
                                                     }
-                                                    if (isset($_SESSION['no_login'])) { 
-                                                        echo $_SESSION['no_login'];
-                                                        unset($_SESSION['no_login']); 
-                                                    }
                                                     ?>
                                                 </h5>
                                                 <form method="POST" action="" class="mt-2 mt-sm-3">
