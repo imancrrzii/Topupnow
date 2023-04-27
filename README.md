@@ -11,6 +11,8 @@ Online Topup Management System Mini-Project. This is a Web based Application dev
 Software : XAMPP / Wamp / Mamp/ Lamp (anyone).
 
 # Installation
-Just create new database in phpmyadmin and import SQL file ```pplbo.sql```. Also configure the ```database.php``` in ```config``` folder to set up the necessary connections with the database.
+Just create new database 'pplbo' in phpmyadmin and import SQL file ```pplbo.sql```. Also configure the ```database.php``` in ```config``` folder to set up the necessary connections with the database.
+
+
 
 
