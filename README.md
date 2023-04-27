@@ -13,7 +13,7 @@ Software : XAMPP / Wamp / Mamp/ Lamp (anyone).
 # Installation
 * Extract pplbo.zip in the xampp/htdocs directory
 * Just create new database 'pplbo' in phpmyadmin and import SQL file ```pplbo.sql```. Also configure the ```database.php``` in ```config``` folder to set up the necessary connections with the database.
-* Type in the browser localhost/pplbo/
+* Type in the browser ```localhost/pplbo/```
 
 
 
