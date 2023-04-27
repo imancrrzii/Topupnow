@@ -3,9 +3,11 @@ Online Topup Management System Mini-Project. This is a Web based Application dev
 
 # Technologies Used
 * PHP
-* SQL
+* MySQL
 * Bootstrap
 * Jquery
+* Html
+* CSS
 
 # System Requirements
 Software : XAMPP / Wamp / Mamp/ Lamp (anyone).
