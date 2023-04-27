@@ -82,7 +82,7 @@ class Category
                 <?php
             }
         } else {
-            echo "<h1><span>Category not added</span></h1>";
+           echo "<h1><span>Category not added</span></h1>";
         }
     }
     public function displayHome()
